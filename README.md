@@ -5,7 +5,7 @@ Author: Inas AL-Kamachy
 ## Data Analysis
 
 ### Load and Read the Data
-First, a function `read_and_clean_svmlight` is defined to read data files related to SVMlight format and perform basic cleaning by removing semicolons from the index. This operation loops over the 10 batch files, combining all loaded features (sensor readings) into a single DataFrame `X` and target labels (gas types) into a Series `Y`, then concatenates the features and the target in one dataframe.
+First, a function `read_and_clean_svmlight` is defined to read data files related to SVMlight format and perform basic cleaning by removing semicolons from the index. This operation loops over the 10 batch files, combining all loaded features (sensor readings) into a single DataFrame `X` and target labels (gas types) into a Series `Y`, then concatenates the features and the target in one dataframe. then make a single csv file, after that loaded and split,so take first columns which contain continuous value as target (y), and the rest columns as features (X)
 
 ### Identify the Outlier Using IQR
 Using the Interquartile Range (IQR) method, outliers are identified and replaced with the column median.
